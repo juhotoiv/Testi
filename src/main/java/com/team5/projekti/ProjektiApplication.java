@@ -22,7 +22,7 @@ public class ProjektiApplication {
 	// Loggeri
 	private static final Logger log = LoggerFactory.getLogger(ProjektiApplication.class);
 	
-	// Esimerkkikysymysten poisto ja lisääminen tietokantaan
+	// Vanhojen esimerkkikysymysten poisto ja uusien lisääminen tietokantaan
 	@Bean
 	public CommandLineRunner questionDemo(RadioRepository rqRepository) {
 		return (args) -> {
