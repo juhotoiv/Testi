@@ -1,15 +1,14 @@
 package com.juho.testi.web;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.juho.testi.domain.*;
 
@@ -30,17 +29,9 @@ public class QuizController {
 		return rqRepository.findById(id);
 	}
 	
-	/*
-	@RequestMapping(value="/test/radioquestions", method=RequestMethod.GET)
-	public String findAllRadioQuestionsTEST(Model model) {
-		model.addAttribute("radioQuestions", rqRepository.findAll());
-		return "allQuestions";
-	}
-	
-	@RequestMapping(value="/test/radioquestion/{id}", method=RequestMethod.GET)
-	public String findRadioQuestionTEST(@PathVariable Long id, Model model) {
-		model.addAttribute("radioQuestion", rqRepository.findById(id));
-		return "question";
-	} */
-	
+	// Rest-rajapinta kaikille Radio-kysymyksille
+	@RequestMapping(value="/radios", method = RequestMethod.GET)
+    public @ResponseBody List<Radio> findAllRadioQuestions() {	
+        return (List<Radio>) rqRepository.findAll();
+    }
 }
