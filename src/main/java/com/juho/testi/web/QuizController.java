@@ -20,10 +20,11 @@ public class QuizController {
 	/* @Autowired
 	private RadioRepository rqRepository; */
 	
-	@RequestMapping(value= {"/"})
-	    public @ResponseBody String Main() {	
-	        return "quiz";
-	    }
+	@RequestMapping("/index")
+	public String index() {
+		return "index";
+	}
+	
 	/*
 	// Rest-rajapinta yksittäiselle Radio-kysymykselle
 	@RequestMapping(value="/radio/{id}", method=RequestMethod.GET)
