@@ -16,14 +16,18 @@ public class TestiApplication {
 		SpringApplication.run(TestiApplication.class, args);
 	}
 	
+	
+	// POISTA MYÖHEMMIN KAIKKI TÄMÄN JÄLKEEN
 	// Loggeri
 	private static final Logger log = LoggerFactory.getLogger(TestiApplication.class);
 	
-	// Esimerkkikysymysten lisääminen tietokantaan
+	// Esimerkkikysymysten poisto ja lisääminen tietokantaan
 	@Bean
 	public CommandLineRunner questionDemo(RadioRepository rqRepository) {
 		return (args) -> {
 			
+			log.info("delete old test data");
+			rqRepository.deleteAll();
 			log.info("save demo radio questions to db");
 			rqRepository.save(new Radio("Mitä kuuluu?"));
 			rqRepository.save(new Radio("Miten menee?"));
