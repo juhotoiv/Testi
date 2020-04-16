@@ -1,4 +1,4 @@
-package com.juho.testi.domain;
+package com.team5.projekti.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

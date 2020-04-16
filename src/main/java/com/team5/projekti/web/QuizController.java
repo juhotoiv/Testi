@@ -1,4 +1,4 @@
-package com.juho.testi.web;
+package com.team5.projekti.web;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.juho.testi.domain.*;
+import com.team5.projekti.domain.*;
 
 @Controller
 public class QuizController {

@@ -1,25 +1,26 @@
-package com.juho.testi;
+package com.team5.projekti;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+
+import com.team5.projekti.domain.*;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 
-import com.juho.testi.domain.*;
-
 @SpringBootApplication
-public class TestiApplication {
+public class ProjektiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TestiApplication.class, args);
+		SpringApplication.run(ProjektiApplication.class, args);
 	}
 	
 	
 	// POISTA MYÖHEMMIN KAIKKI TÄMÄN JÄLKEEN
 	// Loggeri
-	private static final Logger log = LoggerFactory.getLogger(TestiApplication.class);
+	private static final Logger log = LoggerFactory.getLogger(ProjektiApplication.class);
 	
 	// Esimerkkikysymysten poisto ja lisääminen tietokantaan
 	@Bean

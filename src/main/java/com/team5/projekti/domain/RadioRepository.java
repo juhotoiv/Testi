@@ -1,4 +1,4 @@
-package com.juho.testi.domain;
+package com.team5.projekti.domain;
 
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
